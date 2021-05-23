@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: streams-api
+    env_file: 
+      - .env
     volumes: 
       - ".:/app"
     ports:

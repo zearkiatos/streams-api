@@ -19,3 +19,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install dependencies
       run: npm install
+          - name: Create .env
+      run: |
+        touch .env &&
+        echo "NODE_ENV=${NODE_ENV}" > .env &&
+        echo "PORT=${PORT}" >> .env
+      env:
+        NODE_ENV: ${{ secrets.NODE_ENV }}
+        PORT: ${{ secrets.PORT }}

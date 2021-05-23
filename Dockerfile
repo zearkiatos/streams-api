@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:15-alpine
 
 RUN apk update && apk add python make g++
 RUN apk add --update nodejs npm
@@ -11,4 +11,4 @@ RUN npm install
 
 EXPOSE 5001
 
-CMD npm run docker
+CMD npm run dev
