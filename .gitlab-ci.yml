@@ -1,0 +1,17 @@
+image: node:15-alpine
+stages:
+  - install
+
+install-dependencies:
+  stage: install
+  script:
+     - apk update && apk add python make g++
+     - apk add --update nodejs npm
+     - npm install
+  artifacts:
+    expire_in: 1hr
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
