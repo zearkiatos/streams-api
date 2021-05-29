@@ -1,6 +1,6 @@
 {
   "name": "streams-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Api service for streams-client web application. 📺 🎮",
   "scripts": {
     "deploy:vercel": "vercel --prod",
