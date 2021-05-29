@@ -5,8 +5,8 @@ const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const jsonServer = require('json-server');
-const db = require('./src/db');
-const router = jsonServer.router(JSON.parse(JSON.stringify(db)));
+const db = require('./src/db.json');
+const router = jsonServer.router(db);
 const middlewares = jsonServer.defaults();
 const { config } = require('./config');
 
